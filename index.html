@@ -1,288 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talha Bajwa - On-Page SEO Specialist & SEO Content Writer helping SaaS, B2B, and ecommerce brands grow revenue.">
-    <title>Talha Bajwa | SEO Specialist & Content Strategist</title>
+    <meta name="description" content="Talha Bajwa - Professional SEO Specialist.">
+    <title>Talha Bajwa | SEO Specialist</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- Background Decoration Text -->
+    <div class="bg-decor-text bg-text-seo">GROWTH</div>
+    <div class="bg-decor-text bg-text-content">DATA</div>
 
     <!-- Navigation -->
     <header class="site-header">
         <div class="container nav-container">
-            <!-- Mobile Toggle -->
-            <button class="nav-toggle" aria-label="Toggle Navigation">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+            <button class="nav-toggle" aria-label="Menu">
+                <i class="fas fa-bars fa-lg"></i>
             </button>
 
-            <!-- Logo (Centered on Mobile via CSS) -->
             <a href="#" class="logo">
-                <span class="logo-mark">TB</span>
-                <span class="logo-text">Talha Bajwa</span>
+                <div class="logo-dot"></div>
+                Talha Bajwa
             </a>
 
-            <div class="nav-right nav-right-mobile">
-                <!-- Theme Toggle -->
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
-                    <span class="icon">☀</span>
-                </button>
+            <nav class="nav-right">
+                <ul class="nav-list">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Results</a></li>
+                    <li><a href="#competencies">Expertise</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
 
-                <!-- Desktop Nav -->
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#calculators">Tools</a></li>
-                        <li><a href="#case-studies">Results</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Start Project</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
-            <div class="container hero-centered">
-                <figure class="hero-image-card animate-scale delay-1">
-                    <img src="assets/profile.png" alt="Talha Bajwa" loading="lazy">
-                </figure>
-                <p class="eyebrow animate-up delay-2">On-Page SEO Specialist & SEO Content Writer</p>
-                <h1 class="hero-title animate-up delay-3">
-                    Turn Search Traffic Into <br>
-                    <span class="text-accent">Consistent Revenue</span>
-                </h1>
-                <p class="hero-subtitle animate-up delay-4">
-                    I help SaaS, B2B, and ecommerce teams fix on-page issues, ship search-led content, and build internal linking that makes it easy for customers, and Google, to find you.
-                </p>
-                <div class="hero-ctas animate-up delay-4" style="display:flex; gap:1rem; justify-content:center; flex-wrap: wrap;">
-                    <a href="#contact" class="btn btn-primary">Book Consultation</a>
-                    <a href="#services" class="btn btn-secondary">View Services</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEO Calculators -->
-        <section id="calculators" class="section section-alt">
-            <div class="container">
-                <header class="section-header animate-up">
-                    <p class="eyebrow">Growth Tools</p>
-                    <h2>SEO Impact Calculators</h2>
-                    <p class="section-intro">
-                        See the math behind the strategy. Estimate potential revenue uplift from optimizing your organic channel.
+            <div class="container hero-grid">
+                <div class="hero-content animate-up">
+                    <img src="assets/signature.png" alt="Hello, I am Talha" class="hero-signature">
+                    <p class="eyebrow" style="margin-top:0.5rem;">Professional SEO Consultant</p>
+                    <h1>
+                        Turning Search Intent Into
+                        <span class="highlight-bg"><span class="gradient-text">Revenue Streams</span></span>
+                    </h1>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); margin: 2rem 0; max-width: 500px;">
+                        Data-driven SEO strategies that maximize visibility and conversion. I help brands dominate
+                        search results and build sustainable organic funnels.
                     </p>
-                </header>
-                <div class="grid cards-2">
-                    <!-- Revenue Calculator -->
-                    <article class="card tool-card animate-up delay-1">
-                        <h3>📈 Revenue Projection</h3>
-                        <p style="color:var(--text-muted); margin-bottom:1.5rem;">Estimate revenue uplift from SEO improvements.</p>
-                        <form id="revenue-form">
-                            <div class="input-group">
-                                <label>Monthly Traffic</label>
-                                <input type="number" name="traffic" class="input-field" placeholder="e.g. 5000" required>
-                            </div>
-                            <div class="input-group">
-                                <label>Conversion Rate (%)</label>
-                                <input type="number" name="conversion_rate" class="input-field" step="0.1" placeholder="e.g. 2.5" required>
-                            </div>
-                            <div class="input-group">
-                                <label>Avg. Order Value ($)</label>
-                                <input type="number" name="aov" class="input-field" placeholder="e.g. 100" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width:100%">Calculate Potential</button>
-                        </form>
-                        <div id="revenue-result" class="result-box" style="display:none;"></div>
-                    </article>
 
-                    <!-- Traffic Calculator -->
-                    <article class="card tool-card animate-up delay-2">
-                        <h3>🚀 Traffic Forecaster</h3>
-                        <p style="color:var(--text-muted); margin-bottom:1.5rem;">Project organic traffic growth over time.</p>
-                        <form id="traffic-form">
-                            <div class="input-group">
-                                <label>Current Monthly Traffic</label>
-                                <input type="number" name="current_traffic" class="input-field" placeholder="e.g. 1000" required>
-                            </div>
-                            <div class="input-group">
-                                <label>Expected Monthly Growth (%)</label>
-                                <input type="number" name="growth_rate" class="input-field" step="0.1" placeholder="e.g. 5" required>
-                            </div>
-                            <div class="input-group">
-                                <label>Projection Period (Months)</label>
-                                <input type="number" name="months" class="input-field" value="12" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width:100%">Forecast Traffic</button>
-                        </form>
-                        <div id="traffic-result" class="result-box" style="display:none;"></div>
-                    </article>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book Consultation
+                        </a>
+                        <a href="#services" class="btn btn-outline">
+                            <i class="fas fa-list-check"></i> View Services
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h4>150+</h4>
+                            <p>Projects Delivered</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>95%</h4>
+                            <p>Retention Rate</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>3+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper animate-up delay-1">
+                    <div class="blob-bg"></div>
+                    <div class="hero-card">
+                        <img src="assets/profile.png" alt="Talha Bajwa Profile">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services -->
+        <!-- Services Section (Moved to Top) -->
         <section id="services" class="section">
             <div class="container">
-                <header class="section-header animate-up">
-                    <p class="eyebrow">Services</p>
-                    <h2>On-Page SEO & Content</h2>
-                    <p class="section-intro">Strategies designed to plug into your existing marketing team and ship work that actually impacts revenue.</p>
+                <header class="section-header">
+                    <p class="eyebrow"><i class="fas fa-briefcase"></i> Solutions</p>
+                    <h2>Comprehensive SEO Services</h2>
                 </header>
-                <div class="grid cards-3">
-                    <article class="card animate-up delay-1">
-                        <div class="step-number">01</div>
-                        <h3 class="text-accent">On-Page Optimization</h3>
-                        <p>Fix technical and structural details. Audits, intent analysis, and prioritized action lists for titles, headings, and copy that drives rankings.</p>
+
+                <div class="services-grid">
+                    <!-- Content Writing First -->
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>SEO Content Writing</h3>
+                        <p>High-quality, intent-matched content that ranks and converts. Blogs, landing pages, and copy.
+                        </p>
                     </article>
-                    <article class="card animate-up delay-2">
-                        <div class="step-number">02</div>
-                        <h3 class="text-accent">SEO Content Writing</h3>
-                        <p>Search-led blog posts and landing pages written for humans first. Includes topic research, structure, and conversion CTAs tailored to your funnel.</p>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Content Strategy</h3>
+                        <p>Roadmaps for growth. Topic clustering and content calendar planning.</p>
                     </article>
-                    <article class="card animate-up delay-3">
-                        <div class="step-number">03</div>
-                        <h3 class="text-accent">Strategy & Keywords</h3>
-                        <p>Topic clusters, content calendars, and quarterly roadmaps. Map keyword research to real customer journeys to capture high-intent traffic.</p>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Technical SEO</h3>
+                        <p>Deep-dive audits, crawl budget optimization, and Core Web Vitals improvement.</p>
+                    </article>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <h3>Keyword Research</h3>
+                        <p>Identifying low-competition, high-value keywords to drive traffic.</p>
+                    </article>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-sliders"></i>
+                        </div>
+                        <h3>On-Page Optimization</h3>
+                        <p>Perfecting meta tags, headers, and internal linking for maximum relevance.</p>
+                    </article>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Local SEO</h3>
+                        <p>GMB optimization and citation building to capture local market share.</p>
+                    </article>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>E-commerce SEO</h3>
+                        <p>Structure and schema optimization for online stores (Shopify, WooCommerce).</p>
+                    </article>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Link Building</h3>
+                        <p>Acquiring high-authority backlinks through outreach and digital PR.</p>
+                    </article>
+
+                    <article class="service-card interactive-card">
+                        <div class="service-icon-box plain-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>SEO Consultation</h3>
+                        <p>Strategic advice and training for internal marketing teams.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Process / Workflow (New Section) -->
+        <!-- Process Section -->
+        <section id="process" class="section">
+            <div class="container animate-up">
+                <header class="section-header">
+                    <p class="eyebrow">Methodology</p>
+                    <h2>My Winning Process</h2>
+                </header>
+                <div class="process-wrapper">
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-search"></i></div>
+                        <h4>Discovery</h4>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-file-medical-alt"></i></div>
+                        <h4>Audit</h4>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-chess-knight"></i></div>
+                        <h4>Strategy</h4>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-cogs"></i></div>
+                        <h4>Implementation</h4>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Reporting</h4>
+                    </div>
+                </div>
+
+                <!-- Integrated Tech Stack -->
+                <div class="tech-stack-grid"
+                    style="margin-top: 4rem; border-top: 1px solid var(--border-light); padding-top: 3rem;">
+                    <div class="tech-item"><i class="fab fa-google"></i> GA4</div>
+                    <div class="tech-item"><i class="fab fa-google"></i> Search Console</div>
+                    <div class="tech-item"><i class="fas fa-layer-group"></i> Ahrefs</div>
+                    <div class="tech-item"><i class="fas fa-frog"></i> Screaming Frog</div>
+                    <div class="tech-item"><i class="fas fa-chart-bar"></i> Semrush</div>
+                    <div class="tech-item"><i class="fas fa-robot"></i> Moz</div>
+                    <div class="tech-item"><i class="fas fa-water"></i> SEOSurfer</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Enhanced SEO Section -->
+        <section id="ai-enhanced" class="section section-alt">
+            <div class="container animate-up">
+                <header class="section-header">
+                    <p class="eyebrow"><i class="fas fa-robot"></i> Innovation</p>
+                    <h2>AI-Enhanced SEO</h2>
+                    <p style="color:var(--text-muted); max-width:700px; margin:1rem auto;">
+                        Modern SEO needs faster research and smarter planning. I use AI to support strategy without
+                        relying on auto-generated content.
+                    </p>
+                </header>
+
+                <div class="ai-intro">
+                    <div class="ai-grid">
+                        <div style="flex:1;">
+                            <h3><i class="fas fa-brain ai-icon"></i> Why it Helps You</h3>
+                            <p>AI helps cut research time, reduce guesswork, and provide more accurate forecasts.
+                                Strategy and decision making remain human, backed by real data and practical experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-grid">
+                    <!-- Support Card -->
+                    <div class="ai-list-card">
+                        <h3><i class="fas fa-search ai-icon"></i> Strategic Support</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Search Intent Modeling</li>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Predictive Keyword Research</li>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Content Planning at Scale</li>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Entity & Semantic Optimization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Card -->
+                    <div class="ai-list-card">
+                        <h3><i class="fas fa-cogs ai-icon"></i> Execution & Data</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Technical Issue Detection</li>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Link Prospecting & Filtering</li>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Forecasting Traffic & Revenue</li>
+                            <li><i class="fas fa-check-circle ai-icon"></i> Performance Anomaly Alerts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Area of Expertise (Industries) -->
         <section class="section section-alt">
-            <div class="container">
-                <header class="section-header animate-up">
-                    <p class="eyebrow">Workflow</p>
-                    <h2>How We Work Together</h2>
+            <div class="container animate-up">
+                <header class="section-header">
+                    <p class="eyebrow">Industries</p>
+                    <h2>Areas of Expertise</h2>
                 </header>
-                <div class="grid cards-4">
-                    <div class="card animate-up delay-1" style="padding: 1.5rem; text-align:center;">
-                        <h4 style="margin-bottom:0.5rem;">1. Discovery</h4>
-                        <p style="font-size:0.9rem; color:var(--text-muted);">Audit current performance and align on revenue goals.</p>
+                <div class="industries-grid">
+                    <div class="industry-card">
+                        <i class="fas fa-microchip industry-icon"></i>
+                        <div class="industry-name">Technology</div>
                     </div>
-                    <div class="card animate-up delay-2" style="padding: 1.5rem; text-align:center;">
-                        <h4 style="margin-bottom:0.5rem;">2. Strategy</h4>
-                        <p style="font-size:0.9rem; color:var(--text-muted);">Build the roadmap: quick wins, content plan, and technical fixes.</p>
+                    <div class="industry-card">
+                        <i class="fas fa-cloud industry-icon"></i>
+                        <div class="industry-name">SaaS</div>
                     </div>
-                    <div class="card animate-up delay-3" style="padding: 1.5rem; text-align:center;">
-                        <h4 style="margin-bottom:0.5rem;">3. Execution</h4>
-                        <p style="font-size:0.9rem; color:var(--text-muted);">Shipping content, optimizing pages, and building links.</p>
+                    <div class="industry-card">
+                        <i class="fas fa-shopping-bag industry-icon"></i>
+                        <div class="industry-name">Ecommerce</div>
                     </div>
-                    <div class="card animate-up delay-4" style="padding: 1.5rem; text-align:center;">
-                        <h4 style="margin-bottom:0.5rem;">4. Reporting</h4>
-                        <p style="font-size:0.9rem; color:var(--text-muted);">Monthly reports on traffic, rankings, and conversion impact.</p>
+                    <div class="industry-card">
+                        <i class="fas fa-car industry-icon"></i>
+                        <div class="industry-name">Automotive</div>
+                    </div>
+                    <div class="industry-card">
+                        <i class="fas fa-heartbeat industry-icon"></i>
+                        <div class="industry-name">Medical</div>
+                    </div>
+                    <div class="industry-card">
+                        <i class="fas fa-tshirt industry-icon"></i>
+                        <div class="industry-name">Fashion</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Case Studies -->
-        <section id="case-studies" class="section">
+        <!-- International Clients -->
+        <section class="section">
+            <div class="container animate-up">
+                <header class="section-header">
+                    <p class="eyebrow">Global Reach</p>
+                    <h2>International Results</h2>
+                    <p style="color:var(--text-muted); max-width:600px; margin:0 auto; margin-top:1rem;">
+                        Delivering data-driven SEO strategies across borders.
+                    </p>
+                </header>
+                <div class="flag-grid">
+                    <div class="flag-item"><img src="https://flagcdn.com/w80/us.png" alt="USA" class="flag-emoji"><span
+                            class="country-name">USA</span></div>
+                    <div class="flag-item"><img src="https://flagcdn.com/w80/ca.png" alt="Canada"
+                            class="flag-emoji"><span class="country-name">Canada</span></div>
+                    <div class="flag-item"><img src="https://flagcdn.com/w80/gb.png" alt="UK" class="flag-emoji"><span
+                            class="country-name">UK</span></div>
+                    <div class="flag-item"><img src="https://flagcdn.com/w80/au.png" alt="Australia"
+                            class="flag-emoji"><span class="country-name">Australia</span></div>
+                    <div class="flag-item"><img src="https://flagcdn.com/w80/ae.png" alt="UAE" class="flag-emoji"><span
+                            class="country-name">UAE</span></div>
+                </div>
+                <div style="text-align:center; margin-top:1.5rem;">
+                    <span
+                        style="font-size:2rem; font-weight:800; color:var(--primary); display:block; line-height:1;">And
+                        10+</span>
+                    <span class="country-name" style="display:block; margin-top:0.2rem;">more</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases/Portfolio -->
+        <section id="portfolio" class="section section-alt">
             <div class="container">
-                <header class="section-header animate-up">
+                <header class="section-header">
                     <p class="eyebrow">Results</p>
-                    <h2>Recent Wins</h2>
+                    <h2>Proven Case Studies</h2>
                 </header>
-                <div class="grid cards-3">
-                    <article class="card animate-up delay-1">
-                        <h3>SaaS Blog Refresh</h3>
-                        <p class="section-intro" style="margin:0 0 1rem; font-size:0.9rem;">B2B SaaS</p>
-                        <ul style="color:var(--text-main); font-size:0.95rem;">
-                            <li>Traffic: <span style="font-weight:700; color:#10b981;">+186%</span></li>
-                            <li>Top 3 Rankings: <span style="font-weight:700; color:#10b981;">+32</span></li>
-                            <li>Signups: <span style="font-weight:700; color:#10b981;">+41%</span></li>
+                <div class="grid services-grid">
+
+                    <!-- SaaS -->
+                    <article class="service-card">
+                        <div class="service-icon-box plain-icon" style="color:var(--primary)"><i
+                                class="fas fa-cloud"></i></div>
+                        <h3 style="margin-top:0;">SaaS Growth Engine</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem;">B2B Software</p>
+                        <hr style="border:0; border-top:1px solid var(--border-light); margin:1rem 0;">
+                        <ul style="padding-left:0; list-style:none;">
+                            <li><i class="fas fa-check" style="color:var(--primary)"></i> <b>50k+</b> Monthly Organic
+                                Visits</li>
+                            <li><i class="fas fa-check" style="color:var(--primary)"></i> <b>+420</b> SQLs Generated
+                            </li>
                         </ul>
                     </article>
-                    <article class="card animate-up delay-2">
-                        <h3>Ecommerce Category Pages</h3>
-                        <p class="section-intro" style="margin:0 0 1rem; font-size:0.9rem;">Ecommerce</p>
-                        <ul style="color:var(--text-main); font-size:0.95rem;">
-                            <li>Revenue: <span style="font-weight:700; color:#10b981;">+94%</span></li>
-                            <li>Non-brand Clicks: <span style="font-weight:700; color:#10b981;">+212%</span></li>
-                            <li>CTR: <span style="font-weight:700; color:#10b981;">+1.8% pts</span></li>
+
+                    <!-- Tech -->
+                    <article class="service-card">
+                        <div class="service-icon-box plain-icon" style="color:#0ea5e9;"><i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 style="margin-top:0;">Tech Blog Authority</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem;">Fintech Platform</p>
+                        <hr style="border:0; border-top:1px solid var(--border-light); margin:1rem 0;">
+                        <ul style="padding-left:0; list-style:none;">
+                            <li><i class="fas fa-check" style="color:var(--primary)"></i> <b>120%</b> Traffic Increase
+                            </li>
+                            <li><i class="fas fa-check" style="color:var(--primary)"></i> <b>DR 45</b> Achieved in 6 Mo
+                            </li>
                         </ul>
                     </article>
-                    <article class="card animate-up delay-3">
-                        <h3>Lead-Gen Hub</h3>
-                        <p class="section-intro" style="margin:0 0 1rem; font-size:0.9rem;">B2B Lead Gen</p>
-                        <ul style="color:var(--text-main); font-size:0.95rem;">
-                            <li>Keywords: <span style="font-weight:700; color:#10b981;">+47 Top 10</span></li>
-                            <li>Demos: <span style="font-weight:700; color:#10b981;">+63%</span></li>
-                            <li>Content ROI: <span style="font-weight:700; color:#10b981;">3.6x Pipeline</span></li>
+
+                    <!-- Ecommerce -->
+                    <article class="service-card">
+                        <div class="service-icon-box plain-icon" style="color:var(--accent-pink)"><i
+                                class="fas fa-shopping-cart"></i></div>
+                        <h3 style="margin-top:0;">E-commerce Scale</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem;">DTC Fashion</p>
+                        <hr style="border:0; border-top:1px solid var(--border-light); margin:1rem 0;">
+                        <ul style="padding-left:0; list-style:none;">
+                            <li><i class="fas fa-check" style="color:var(--primary)"></i> <b>$500k+</b> Organic Revenue
+                            </li>
+                            <li><i class="fas fa-check" style="color:var(--primary)"></i> <b>Top 1</b> for "Brand"
+                                Keywords</li>
                         </ul>
                     </article>
+
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section (New) -->
-        <section class="section section-alt">
+        <!-- Core Competencies (Moved Below Results) -->
+        <section id="competencies" class="section section-alt">
+            <div class="container animate-up">
+                <header class="section-header">
+                    <p class="eyebrow">Skills</p>
+                    <h2>Core Competencies</h2>
+                </header>
+
+                <div class="competencies-grid">
+                    <div class="comp-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data Driven Results</h4>
+                        <p>Focusing on metrics that matter. Translating complex analytics into actionable growth
+                            strategies.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Client Relationship</h4>
+                        <p>Building long-term partnerships through transparency, consistent communication, and shared
+                            success.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-chess"></i>
+                        <h4>Strategic Planning</h4>
+                        <p>Developing comprehensive roadmaps that align SEO initiatives with broader business
+                            objectives.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-coins"></i>
+                        <h4>ROI Focus</h4>
+                        <p>Prioritizing high-impact activities to ensure maximum return on investment for every
+                            campaign.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-sync-alt"></i>
+                        <h4>Adaptability</h4>
+                        <p>Staying ahead of algorithm updates and market shifts to keep strategies effective and
+                            resilient.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-comments"></i>
+                        <h4>Communication</h4>
+                        <p>Simplifying technical jargon to ensure stakeholders understand the value and progress of
+                            work.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Technical SEO</h4>
+                        <p>Mastering the backend nuances to ensure search engines can crawl, index, and rank sites
+                            flawlessly.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Growth Hacking</h4>
+                        <p>Identifying unconventional and rapid avenues for scaling traffic and user acquisition.</p>
+                    </div>
+                    <div class="comp-card">
+                        <i class="fas fa-users-cog"></i>
+                        <h4>Leadership</h4>
+                        <p>Guiding teams and projects with a vision-first approach to achieve collective excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Merged -->
+
+        <!-- Tools Widget -->
+        <section id="tools" class="section">
             <div class="container">
-                <header class="section-header animate-up">
+                <header class="section-header">
+                    <p class="eyebrow">Calculators</p>
+                    <h2>Growth Planning Tools</h2>
+                </header>
+
+                <div class="tools-wrapper animate-up">
+
+                    <!-- Revenue Calc -->
+                    <div id="rev-calc" class="calculator-panel">
+                        <div class="tool-header">
+                            <h3><i class="fas fa-coins"></i> Revenue</h3>
+                            <div class="tool-info"
+                                data-tooltip="Estimate potential revenue based on traffic and conversion rates.">
+                                <i class="fas fa-circle-question"></i>
+                            </div>
+                        </div>
+                        <form id="revenue-form">
+                            <div class="input-group" style="margin-bottom:1rem;">
+                                <label>Traffic</label>
+                                <input type="number" name="traffic" class="input-field" placeholder="5000" required>
+                            </div>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                                <div class="input-group">
+                                    <label>Conv %</label>
+                                    <input type="number" name="conversion_rate" class="input-field" placeholder="2.5"
+                                        step="0.1" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>AOV ($)</label>
+                                    <input type="number" name="aov" class="input-field" placeholder="100" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="width:100%; margin-top:1.5rem; justify-content:center;">Calculate</button>
+                        </form>
+                        <div id="revenue-result" class="result-box-neutral" style="display:none; margin-top:1rem;">
+                        </div>
+                    </div>
+
+                    <!-- Traffic Calc -->
+                    <div id="traf-calc" class="calculator-panel">
+                        <div class="tool-header">
+                            <h3><i class="fas fa-rocket"></i> Traffic</h3>
+                            <div class="tool-info"
+                                data-tooltip="Forecast future traffic growth based on monthly growth rates.">
+                                <i class="fas fa-circle-question"></i>
+                            </div>
+                        </div>
+                        <form id="traffic-form">
+                            <div class="input-group" style="margin-bottom:1rem;">
+                                <label>Current Traffic</label>
+                                <input type="number" name="current_traffic" class="input-field" placeholder="1000"
+                                    required>
+                            </div>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                                <div class="input-group">
+                                    <label>Growth %</label>
+                                    <input type="number" name="growth_rate" class="input-field" placeholder="5"
+                                        step="0.1" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Months</label>
+                                    <input type="number" name="months" class="input-field" value="12" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="width:100%; margin-top:1.5rem; justify-content:center;">Simulate</button>
+                        </form>
+                        <div id="traffic-result" class="result-box-neutral" style="display:none; margin-top:1rem;">
+                        </div>
+                    </div>
+
+                    <!-- ROI Calc -->
+                    <div id="roi-calc" class="calculator-panel">
+                        <div class="tool-header">
+                            <h3><i class="fas fa-percentage"></i> ROI</h3>
+                            <div class="tool-info"
+                                data-tooltip="Calculate Return on Investment for your content marketing efforts.">
+                                <i class="fas fa-circle-question"></i>
+                            </div>
+                        </div>
+                        <form id="roi-form-main">
+                            <div class="input-group" style="margin-bottom:1rem;">
+                                <label>Content Cost ($)</label>
+                                <input type="number" name="cost" class="input-field" placeholder="500" value="500"
+                                    required>
+                            </div>
+                            <div class="input-group" style="margin-bottom:1rem;">
+                                <label>Monthly Value ($)</label>
+                                <input type="number" name="value" class="input-field" placeholder="50" value="50"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="width:100%; margin-top:0.5rem; justify-content:center;">Estimate</button>
+                        </form>
+                        <div id="roi-result-main" class="result-box-neutral" style="display:none; margin-top: 1rem;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container animate-up">
+                <header class="section-header">
                     <p class="eyebrow">FAQ</p>
                     <h2>Common Questions</h2>
                 </header>
-                <div class="accordion animate-up delay-1">
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            What services do you offer?
-                            <span class="accordion-icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Services include on-page SEO audits and implementation, SEO content writing for blogs and landing pages, content and keyword strategy, and ongoing consulting.</p>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How long until I see results?
+                            <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>SEO is a long-term strategy. Typically, you can expect initial movements within 3 months,
+                                with significant traffic and revenue impact between 6-12 months.</p>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            How long do SEO projects usually take?
-                            <span class="accordion-icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Timelines depend on scope, but most projects run between 4 and 12 weeks. Early technical and on-page fixes are prioritised so you can see movement sooner.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you handle implementation?
+                            <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, I can work directly with your developers or Content CMS (WordPress, Shopify,
+                                Webflow) to implement technical fixes and content updates.</p>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            What deliverables can I expect?
-                            <span class="accordion-icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Typical deliverables include a structured on-page SEO audit, prioritised recommendations, optimized page copies or detailed content briefs, internal linking plans, and simple reporting on impact.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you work globally?
+                            <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. I have delivered projects for clients in the USA, Canada, Australia, UK, UAE,
+                                and Pakistan, tailoring strategies to local nuances.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you do retainers or project-based work?
+                            <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I offer both. Monthly retainers are best for ongoing growth, while project-based audits
+                                or migrations suit specific needs.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="section">
-            <div class="container form-card">
-                <header class="section-header animate-up">
-                    <h2>Start a Project</h2>
-                    <p class="section-intro">Share your goals and I'll get back to you.</p>
-                </header>
-                <form id="contact-form" class="card animate-up delay-1">
-                    <div class="input-group">
-                        <label>Name</label>
-                        <input type="text" name="name" class="input-field" required>
+        <!-- Contact Section -->
+        <section id="contact" class="footer-cta center-text">
+            <div class="container form-card animate-up"
+                style="background:var(--bg-card); padding:3rem; border-radius:20px; box-shadow:var(--shadow-card); max-width:800px; text-align:left;">
+                <div style="text-align:center; margin-bottom:2rem;">
+                    <p class="eyebrow">Start a Project</p>
+                    <h2>Let's Discuss Your Growth</h2>
+                    <p style="color:var(--text-muted);">Fill out the form below and I'll get back to you within 24
+                        hours.</p>
+                </div>
+
+                <form id="contact-form" style="margin-top:2rem;">
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" name="name" class="input-field" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" name="email" class="input-field" required>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <label>Email</label>
-                        <input type="email" name="email" class="input-field" required>
+                    <div class="input-group" style="margin-bottom:1.5rem;">
+                        <label>Website URL (Optional)</label>
+                        <input type="url" name="website" class="input-field">
                     </div>
-                    <div class="input-group">
-                        <label>Message / Goals</label>
-                        <textarea name="message" class="input-field" rows="4" required></textarea>
+                    <div class="input-group" style="margin-bottom:1.5rem;">
+                        <label>Project Details</label>
+                        <textarea name="message" class="input-field" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
-                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:1rem; text-align:center;">
-                        I'll respond within 2-3 working days.
-                    </p>
+                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send
+                        Message <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </section>
@@ -291,15 +663,20 @@
 
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-links">
-                <a href="#" class="social-icon">Li</a>
-                <a href="#" class="social-icon">Tw</a>
-                <a href="#" class="social-icon">Ma</a>
+            <!-- LinkedIn Button -->
+            <div style="margin-bottom:1.5rem;">
+                <a href="https://www.linkedin.com/in/talhabajwaseo" target="_blank" class="btn btn-outline"
+                    style="border-radius:50px; padding:0.5rem 1.5rem;">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
             </div>
-            <p>&copy; 2026 Talha Bajwa. All rights reserved.</p>
+            <!-- Centered Copy -->
+            <p style="color:var(--text-muted); font-size:0.9rem; margin:0;">&copy; 2026 Talha Bajwa. All
+                rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
