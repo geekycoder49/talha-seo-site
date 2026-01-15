@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talha Bajwa - On-Page SEO Specialist & SEO Content Writer helping SaaS, B2B, and ecommerce brands grow revenue.">
+    <title>Talha Bajwa | SEO Specialist & Content Strategist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <!-- Mobile Toggle -->
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Logo (Centered on Mobile via CSS) -->
+            <a href="#" class="logo">
+                <span class="logo-mark">TB</span>
+                <span class="logo-text">Talha Bajwa</span>
+            </a>
+
+            <div class="nav-right nav-right-mobile">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <span class="icon">☀</span>
+                </button>
+
+                <!-- Desktop Nav -->
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#calculators">Tools</a></li>
+                        <li><a href="#case-studies">Results</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Start Project</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-centered">
+                <figure class="hero-image-card animate-scale delay-1">
+                    <img src="assets/profile.png" alt="Talha Bajwa" loading="lazy">
+                </figure>
+                <p class="eyebrow animate-up delay-2">On-Page SEO Specialist & SEO Content Writer</p>
+                <h1 class="hero-title animate-up delay-3">
+                    Turn Search Traffic Into <br>
+                    <span class="text-accent">Consistent Revenue</span>
+                </h1>
+                <p class="hero-subtitle animate-up delay-4">
+                    I help SaaS, B2B, and ecommerce teams fix on-page issues, ship search-led content, and build internal linking that makes it easy for customers, and Google, to find you.
+                </p>
+                <div class="hero-ctas animate-up delay-4" style="display:flex; gap:1rem; justify-content:center; flex-wrap: wrap;">
+                    <a href="#contact" class="btn btn-primary">Book Consultation</a>
+                    <a href="#services" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Calculators -->
+        <section id="calculators" class="section section-alt">
+            <div class="container">
+                <header class="section-header animate-up">
+                    <p class="eyebrow">Growth Tools</p>
+                    <h2>SEO Impact Calculators</h2>
+                    <p class="section-intro">
+                        See the math behind the strategy. Estimate potential revenue uplift from optimizing your organic channel.
+                    </p>
+                </header>
+                <div class="grid cards-2">
+                    <!-- Revenue Calculator -->
+                    <article class="card tool-card animate-up delay-1">
+                        <h3>📈 Revenue Projection</h3>
+                        <p style="color:var(--text-muted); margin-bottom:1.5rem;">Estimate revenue uplift from SEO improvements.</p>
+                        <form id="revenue-form">
+                            <div class="input-group">
+                                <label>Monthly Traffic</label>
+                                <input type="number" name="traffic" class="input-field" placeholder="e.g. 5000" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Conversion Rate (%)</label>
+                                <input type="number" name="conversion_rate" class="input-field" step="0.1" placeholder="e.g. 2.5" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Avg. Order Value ($)</label>
+                                <input type="number" name="aov" class="input-field" placeholder="e.g. 100" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%">Calculate Potential</button>
+                        </form>
+                        <div id="revenue-result" class="result-box" style="display:none;"></div>
+                    </article>
+
+                    <!-- Traffic Calculator -->
+                    <article class="card tool-card animate-up delay-2">
+                        <h3>🚀 Traffic Forecaster</h3>
+                        <p style="color:var(--text-muted); margin-bottom:1.5rem;">Project organic traffic growth over time.</p>
+                        <form id="traffic-form">
+                            <div class="input-group">
+                                <label>Current Monthly Traffic</label>
+                                <input type="number" name="current_traffic" class="input-field" placeholder="e.g. 1000" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Expected Monthly Growth (%)</label>
+                                <input type="number" name="growth_rate" class="input-field" step="0.1" placeholder="e.g. 5" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Projection Period (Months)</label>
+                                <input type="number" name="months" class="input-field" value="12" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%">Forecast Traffic</button>
+                        </form>
+                        <div id="traffic-result" class="result-box" style="display:none;"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="section">
+            <div class="container">
+                <header class="section-header animate-up">
+                    <p class="eyebrow">Services</p>
+                    <h2>On-Page SEO & Content</h2>
+                    <p class="section-intro">Strategies designed to plug into your existing marketing team and ship work that actually impacts revenue.</p>
+                </header>
+                <div class="grid cards-3">
+                    <article class="card animate-up delay-1">
+                        <div class="step-number">01</div>
+                        <h3 class="text-accent">On-Page Optimization</h3>
+                        <p>Fix technical and structural details. Audits, intent analysis, and prioritized action lists for titles, headings, and copy that drives rankings.</p>
+                    </article>
+                    <article class="card animate-up delay-2">
+                        <div class="step-number">02</div>
+                        <h3 class="text-accent">SEO Content Writing</h3>
+                        <p>Search-led blog posts and landing pages written for humans first. Includes topic research, structure, and conversion CTAs tailored to your funnel.</p>
+                    </article>
+                    <article class="card animate-up delay-3">
+                        <div class="step-number">03</div>
+                        <h3 class="text-accent">Strategy & Keywords</h3>
+                        <p>Topic clusters, content calendars, and quarterly roadmaps. Map keyword research to real customer journeys to capture high-intent traffic.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process / Workflow (New Section) -->
+        <section class="section section-alt">
+            <div class="container">
+                <header class="section-header animate-up">
+                    <p class="eyebrow">Workflow</p>
+                    <h2>How We Work Together</h2>
+                </header>
+                <div class="grid cards-4">
+                    <div class="card animate-up delay-1" style="padding: 1.5rem; text-align:center;">
+                        <h4 style="margin-bottom:0.5rem;">1. Discovery</h4>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Audit current performance and align on revenue goals.</p>
+                    </div>
+                    <div class="card animate-up delay-2" style="padding: 1.5rem; text-align:center;">
+                        <h4 style="margin-bottom:0.5rem;">2. Strategy</h4>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Build the roadmap: quick wins, content plan, and technical fixes.</p>
+                    </div>
+                    <div class="card animate-up delay-3" style="padding: 1.5rem; text-align:center;">
+                        <h4 style="margin-bottom:0.5rem;">3. Execution</h4>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Shipping content, optimizing pages, and building links.</p>
+                    </div>
+                    <div class="card animate-up delay-4" style="padding: 1.5rem; text-align:center;">
+                        <h4 style="margin-bottom:0.5rem;">4. Reporting</h4>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Monthly reports on traffic, rankings, and conversion impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section id="case-studies" class="section">
+            <div class="container">
+                <header class="section-header animate-up">
+                    <p class="eyebrow">Results</p>
+                    <h2>Recent Wins</h2>
+                </header>
+                <div class="grid cards-3">
+                    <article class="card animate-up delay-1">
+                        <h3>SaaS Blog Refresh</h3>
+                        <p class="section-intro" style="margin:0 0 1rem; font-size:0.9rem;">B2B SaaS</p>
+                        <ul style="color:var(--text-main); font-size:0.95rem;">
+                            <li>Traffic: <span style="font-weight:700; color:#10b981;">+186%</span></li>
+                            <li>Top 3 Rankings: <span style="font-weight:700; color:#10b981;">+32</span></li>
+                            <li>Signups: <span style="font-weight:700; color:#10b981;">+41%</span></li>
+                        </ul>
+                    </article>
+                    <article class="card animate-up delay-2">
+                        <h3>Ecommerce Category Pages</h3>
+                        <p class="section-intro" style="margin:0 0 1rem; font-size:0.9rem;">Ecommerce</p>
+                        <ul style="color:var(--text-main); font-size:0.95rem;">
+                            <li>Revenue: <span style="font-weight:700; color:#10b981;">+94%</span></li>
+                            <li>Non-brand Clicks: <span style="font-weight:700; color:#10b981;">+212%</span></li>
+                            <li>CTR: <span style="font-weight:700; color:#10b981;">+1.8% pts</span></li>
+                        </ul>
+                    </article>
+                    <article class="card animate-up delay-3">
+                        <h3>Lead-Gen Hub</h3>
+                        <p class="section-intro" style="margin:0 0 1rem; font-size:0.9rem;">B2B Lead Gen</p>
+                        <ul style="color:var(--text-main); font-size:0.95rem;">
+                            <li>Keywords: <span style="font-weight:700; color:#10b981;">+47 Top 10</span></li>
+                            <li>Demos: <span style="font-weight:700; color:#10b981;">+63%</span></li>
+                            <li>Content ROI: <span style="font-weight:700; color:#10b981;">3.6x Pipeline</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (New) -->
+        <section class="section section-alt">
+            <div class="container">
+                <header class="section-header animate-up">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Common Questions</h2>
+                </header>
+                <div class="accordion animate-up delay-1">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What services do you offer?
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Services include on-page SEO audits and implementation, SEO content writing for blogs and landing pages, content and keyword strategy, and ongoing consulting.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How long do SEO projects usually take?
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Timelines depend on scope, but most projects run between 4 and 12 weeks. Early technical and on-page fixes are prioritised so you can see movement sooner.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What deliverables can I expect?
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Typical deliverables include a structured on-page SEO audit, prioritised recommendations, optimized page copies or detailed content briefs, internal linking plans, and simple reporting on impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container form-card">
+                <header class="section-header animate-up">
+                    <h2>Start a Project</h2>
+                    <p class="section-intro">Share your goals and I'll get back to you.</p>
+                </header>
+                <form id="contact-form" class="card animate-up delay-1">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="input-field" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="input-field" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Message / Goals</label>
+                        <textarea name="message" class="input-field" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:1rem; text-align:center;">
+                        I'll respond within 2-3 working days.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="social-icon">Li</a>
+                <a href="#" class="social-icon">Tw</a>
+                <a href="#" class="social-icon">Ma</a>
+            </div>
+            <p>&copy; 2026 Talha Bajwa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
